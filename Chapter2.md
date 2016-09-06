@@ -62,11 +62,11 @@ to memory management?
 
   **Q 2.6:** What system calls have to be executed by a command interpreter or shell in order to start a new process?
 
-    * **Answer:**
+  * **Answer:**
 
-     * `The fork() system calls creates a new process. The new process will have the same address space of the proces that executed the fork().`
+    * `The fork() system calls creates a new process. The new process will have the same address space of the proces that executed the fork().`
 
-      * `After execution of fork(), exec() has to be called by one of the two processes. The exec() system call loads the new program into memory.`
+    * `After execution of fork(), exec() has to be called by one of the two processes. The exec() system call loads the new program into memory.`
 
   **Q 2.7: ** What is the purpose of system programs?
 
