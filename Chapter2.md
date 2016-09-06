@@ -129,3 +129,23 @@ to memory management?
       * `There are times when a process needs to communicate with other process. All this is taken care by operating system.`
 
       * `Communication takes place in the form of data packets and they need access to the network device but user level programs cannot provide that.`
+
+  **Q 2.15:** What are the five major activities of an operating system with regard to file management?
+
+    * **Answer:**
+
+      * `Creation and deletion of files.`
+      * `Creation and deletion of directories.`
+      * `Supporting primitives for manipulating files and directories.`
+      * `Mapping the files onto secondary storage.`
+      * `Backing up files on nonvolatile storage media.`
+
+  **Q 2.18:** What are the two models of interprocess communication? What are the strengths and weaknesses of the two approaches?
+
+    * **Answer:**
+
+      * Message - passing model: `In this, the communicating processes exchange messages with one another to transfer information. Messages can be exchanged between the processes either directly or indirectly through a common mail box. Message passing is useful for exchanging smaller amounts of data, because no conflicts need to be avoided. It is also easier to implement than is shared memory for inter computer communication. But the main advantage is it can handle only small amounts of data.`
+
+      * Shared - Memory mode: `In this, processes use shared memory creates and shared memory attaches system calls to create and gain access to regions of memory owned by other processes. Two or more processes can exchange information by reading and writing data in the shared areas. Shared memory allows maximum speed and convenience of communication, since it can be done at memory speeds when it takes place within a computer. Problem exist, however, in the areas of protection and synchronization between the processes sharing memory.`
+
+      
