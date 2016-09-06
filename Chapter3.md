@@ -1,24 +1,17 @@
 #Chapter 3#
 ***
 
-**Q 3.3:** Original versions of Apple’s mobile iOS operating system provided no
-means of concurrent processing. Discuss three major complications that
-concurrent processing adds to an operating system.
+**Q 3.3:** Original versions of Apple’s mobile iOS operating system provided no means of concurrent processing. Discuss three major complications that concurrent processing adds to an operating system.
 
-  * **Answer:**
+  **Answer:**
 
-    * Concurrent Systems:
+  * Concurrent Systems:
 
-      * `Concurrent systems are those which support the concept of executing
-      more than one applications or processes at the same time. Here the proc-
-      esses running can be either a duplicate of each other or simply two di-
-      fferent processes in all.`
+    * `Concurrent systems are those which support the concept of executing more than one applications or processes at the same time. Here the processes running can be either a duplicate of each other or simply two different processes in all.`
 
-      * `The main motive behind going for concurreny lies beneath reducing the
-      overall execution time that may be required in executing a series of pro-
-      cesses individually.`
+    * `The main motive behind going for concurreny lies beneath reducing the overall execution time that may be required in executing a series of processes individually.`
 
-    * Complications with Concurrency:
+  * Complications with Concurrency:
 
     Concurrency may reduce the overall processing time for some situations, but
     it has few of its complications as well. Three major complications that con-
