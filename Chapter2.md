@@ -60,11 +60,13 @@ to memory management?
 
   * **Answer:** `The main function of command interpreter is to get and execute the next user-specified command. It reads commands from the user or from a file of commands and executes them, usually by turning them into one or more systems calls. It is usually not part of the kernel since the command interpreter is more subject to changes. The command interpreter allows a user to create and manage processes and also determine ways by which they communicate (such as through pipes and files). As all of this functionality could be accessed by a user-level program using the system calls, it should be possible for the user to develop a new command-line interpreter.`
 
-  **Q 2.6: ** What system calls have to be executed by a command interpreter or shell in order to start a new process?
+  **Q 2.6:** What system calls have to be executed by a command interpreter or shell in order to start a new process?
 
-    * **Answer:** `The fork() system calls creates a new process. The new process will have the same address space of the proces that executed the fork().`
+    * **Answer:**
 
-    `After execution of fork(), exec() has to be called by one of the two processes. The exec() system call loads the new program into memory.`
+     * `The fork() system calls creates a new process. The new process will have the same address space of the proces that executed the fork().`
+
+      * `After execution of fork(), exec() has to be called by one of the two processes. The exec() system call loads the new program into memory.`
 
   **Q 2.7: ** What is the purpose of system programs?
 
@@ -171,5 +173,3 @@ to memory management?
       * **Answer:** `An OS has been developed called Mach that modularized the kernel using the microkernel approach. This method structures the OS by removing all non-essential components from the kernel and implemnting them as system and user-level program. Micro kernel provides minimal process and memory management with communication facility. The communication is done indirectly via the method called Message passing.`
 
       `All new services are added to user space and consequently do not require modification of the kernel. Micro kernel provides more security and reliability, since most services are running as user rather than kernel.`
-
-      
