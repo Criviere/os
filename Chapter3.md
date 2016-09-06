@@ -99,23 +99,23 @@ use?
 
       **Answer:**
 
-        **Part 1:**
+      **Part 1:**
 
-        **In the following situation ordinary pipes are more suitable than named pipes.**
+      **In the following situation ordinary pipes are more suitable than named pipes.**
 
-        * `If we want to establish communication between two specific processes on the same machine, then using ordinary pipes is more suitable than using named pipes because named pipes involve more overhead in this situation.`
+      * `If we want to establish communication between two specific processes on the same machine, then using ordinary pipes is more suitable than using named pipes because named pipes involve more overhead in this situation.`
 
-        * `In the situation, where we will not allow access to our pipe after the communication is finished between processes using ordinary pipes is more suitable than named pipes.`
+      * `In the situation, where we will not allow access to our pipe after the communication is finished between processes using ordinary pipes is more suitable than named pipes.`
 
-        **Part 2:**
+     **Part 2:**
 
-        **In the following situations named pipes are more suitable than ordinary pipes.**
+     **In the following situations named pipes are more suitable than ordinary pipes.**
 
-          * `Named pipes are more suitable than ordinary pipes when the medium is bidirectional, and there is no parent child relationship between processes.`
+     * `Named pipes are more suitable than ordinary pipes when the medium is bidirectional, and there is no parent child relationship between processes.`
 
-          * `Named pipes are more suitable than ordinary pipes in situations where we want to communicate over a network rather than communicating with the processes reside on the same machine.`
+     * `Named pipes are more suitable than ordinary pipes in situations where we want to communicate over a network rather than communicating with the processes reside on the same machine.`
 
-          * `Named pipes can be used to listen to request from other processes (similar to TCP/IP ports). If the calling proceses are aware of the name, they can send requests to this. Unnamed pipes cannot be used for this purpose.`
+     * `Named pipes can be used to listen to request from other processes (similar to TCP/IP ports). If the calling proceses are aware of the name, they can send requests to this. Unnamed pipes cannot be used for this purpose.`
 
       **3.18** What are the benefits and the disadvantages of each of the following?
 Consider both the system level and the programmer level.
@@ -124,43 +124,43 @@ b. Automatic and explicit buffering
 c. Send by copy and send by reference
 d. Fixed-sized and variable-sized messages
 
-        **Answer:**
+    **Answer:**
 
-        **Part 1:**
+      **Part 1:**
 
-        a. **Synchrnous and asynchronous communication:**
+      a. **Synchrnous and asynchronous communication:**
 
-        `A benefit of symmetric communication is that it allows a rendezvous between the sender and receiver.`
+      * `A benefit of symmetric communication is that it allows a rendezvous between the sender and receiver.`
         `At the programmer level, neither process has to block its execution which can result in better performance.`
 
         **Part 2:**
 
-        `The disadvantage of asymmetric communication is that, blocking send is a rendezvous and may not be required and the message could be delivered asynchronously and received at a point of no interest to the sender. As a result, message-passing systems often provide both forms of synchronization.`
+      * `The disadvantage of asymmetric communication is that, blocking send is a rendezvous and may not be required and the message could be delivered asynchronously and received at a point of no interest to the sender. As a result, message-passing systems often provide both forms of synchronization.`
 
-        `And it is more difficult to program since the programmer must guarantee that the message arrive at the receiver when it is needed. At the system level, asymmetric is more complicated since it requires kernel-level buffering.`
+      *  `And it is more difficult to program since the programmer must guarantee that the message arrive at the receiver when it is needed. At the system level, asymmetric is more complicated since it requires kernel-level buffering.`
 
-      **Part 3:**
+    **Part 3:**
 
-      b. **Automatic and explicit buffering:**
+    b. **Automatic and explicit buffering:**
 
-        * `Automatic buffering provides a queue with indefinite length. Thus ensuring that the sender will never have to block while waiting to copy a message. There are no specifications how auto matic buffering will be provided. One schema may reserve sufficiently large memory where much of the memory is wasted.`
+    * `Automatic buffering provides a queue with indefinite length. Thus ensuring that the sender will never have to block while waiting to copy a message. There are no specifications how auto matic buffering will be provided. One schema may reserve sufficiently large memory where much of the memory is wasted.`
 
-        * `Explicit buffering specifies how large the bugger is. In this situation, the sender may be blocked while waiting for available space in the queue. However, it is less likely that memory will be wasted in explicit buffering.`
+    * `Explicit buffering specifies how large the bugger is. In this situation, the sender may be blocked while waiting for available space in the queue. However, it is less likely that memory will be wasted in explicit buffering.`
 
-      c. **Send by copy and send by reference:**
+    c. **Send by copy and send by reference:**
 
-        * `Send by copy is better for network generalization and synchronization issues. It does not allow the receiver to alter the state of the parameter, but send by reference allows it. Send by reference is more efficient for big data structures but hard to code because it allows the programmer to write a distributed version of a centralized application (shared memory implications)`
+      * `Send by copy is better for network generalization and synchronization issues. It does not allow the receiver to alter the state of the parameter, but send by reference allows it. Send by reference is more efficient for big data structures but hard to code because it allows the programmer to write a distributed version of a centralized application (shared memory implications)`
 
-        **EX:**
-        `Java's RMI (Remote Method Invocation) provides passing a parameter by reference and requires declaring the parameter as a remote object as well.`
+      **EX:**
+      * `Java's RMI (Remote Method Invocation) provides passing a parameter by reference and requires declaring the parameter as a remote object as well.`
 
-          **Part 5:**
+      **Part 5:**
 
-            d. Fixed-sized and variable sized messages:
+      d. Fixed-sized and variable sized messages:
 
-            * `The implications of this are mostly related to buffering issues with fixed-size messages (a buffer with a specific size can hold a known number of messages). Fixed-Sized messages are easier to implement at the kernel-level but require slightly more effort on the part of the programmer.`
+      * `The implications of this are mostly related to buffering issues with fixed-size messages (a buffer with a specific size can hold a known number of messages). Fixed-Sized messages are easier to implement at the kernel-level but require slightly more effort on the part of the programmer.`
 
-            * `Variable sized messages are somewhat more complex for the kernel but somewhat easier for the programmer. The number of variable-sized messages that can be held by such a buffer is unknown.`
+      * `Variable sized messages are somewhat more complex for the kernel but somewhat easier for the programmer. The number of variable-sized messages that can be held by such a buffer is unknown.`
 
-            Example:
-            `Windows 2000 handles this situation with fixed-sized messages (anything < 256 bytes), the mesages are copied from the address space of the sender to the address space of the receiving process. Larger messages use shared memory to pass the message.`
+      Example:
+      `Windows 2000 handles this situation with fixed-sized messages (anything < 256 bytes), the mesages are copied from the address space of the sender to the address space of the receiving process. Larger messages use shared memory to pass the message.`
