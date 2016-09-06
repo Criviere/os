@@ -148,4 +148,28 @@ to memory management?
 
       * Shared - Memory mode: `In this, processes use shared memory creates and shared memory attaches system calls to create and gain access to regions of memory owned by other processes. Two or more processes can exchange information by reading and writing data in the shared areas. Shared memory allows maximum speed and convenience of communication, since it can be done at memory speeds when it takes place within a computer. Problem exist, however, in the areas of protection and synchronization between the processes sharing memory.`
 
+  **Q 2.19:** Why is the separation of mechanism and policy desirable?
+
+    * **Answer:**
+
+      * `Mechanism determines how to do something and policy means what to do. The separation of policy and mechanism is very important for flexibility. In worst-case, each change in policy would require a change in the underlying mechanism. A general mechanism insensitive to change in policy would be more desirable.`
+
+      * `Policy may change with respect to time. If the mechanism is separated and policy is independent, it can be used to support a policy decision that I/O intensive programs should have priority over CPU-intensive ones or to support the opposite policy.`
+
+   **Q 2.21:** What is the main advantage of the microkernel approach to system design? How do user programs and system services interact in a microkernel architecture? What are the disadvantages of using the microkernel approach?
+
+    * **Answer:**
+
+      * **Part 1:** `The backing - store driver would normally be above the CPU scheduler, because the driver may need to wait for I/O and CPU can be rescheduled during this time. However on large system, the CPU scheduler may have more information about all the active processes that can fit in memory. Therefore, this information may need to be swapped in and out of memory, requiring the backing-store driver routine to be be below the CPU schedule.`
+
+      * **Part 2:** `When a user program executes and I/O operation, it executes an I/O operation, it executes a system call that is trapped to the I/O layer, which calls the memory management layer, which in turn calls the CPU -scheduling layer, which is then passed to hardware. At each layer parameter may be modified, data may need to be passed and so on. Each layer adds overhead to system call, the net result is a system call that takes longer than does one on a non layered system.`
+
+      `The layers are designed, providing most of the advantages of modularized code while avoiding difficult problems of layer definition and interaction.`
+
+    **Q 2.22:** What are the advantages of using loadable kernel modules?
+
+      * **Answer:** `An OS has been developed called Mach that modularized the kernel using the microkernel approach. This method structures the OS by removing all non-essential components from the kernel and implemnting them as system and user-level program. Micro kernel provides minimal process and memory management with communication facility. The communication is done indirectly via the method called Message passing.`
+
+      `All new services are added to user space and consequently do not require modification of the kernel. Micro kernel provides more security and reliability, since most services are running as user rather than kernel.`
+
       
