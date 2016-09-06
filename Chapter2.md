@@ -8,53 +8,53 @@
 
 Purpose of system calls are given as follows:
 
-*  **Basic Purpose:** `Calls provide basic functionality to users to operate the operating system.`
+  **Basic Purpose:** `Calls provide basic functionality to users to operate the operating system.`
 
-* **Process Control:** `Systems call loads, execute and create processes and terminate when the user's task is finished with the process.`
+  **Process Control:** `Systems call loads, execute and create processes and terminate when the user's task is finished with the process.`
 
-* **File Management:** `It provides file management such as creating a file, deleting it, open, close, and save it. It also provides read, write and reposition functionalities`
+  **File Management:** `It provides file management such as creating a file, deleting it, open, close, and save it. It also provides read, write and reposition functionalities`
 
-* **Device Management:** `All hard disk are managed by system calls such as requesting for a device, releasing the device, reading and writing the device`
+  **Device Management:** `All hard disk are managed by system calls such as requesting for a device, releasing the device, reading and writing the device`
 
-* **Information Maintenance:** `System calls help in making information maintenance such as get/set time or date, get/set data of system, processes, files or attributes of device.`
+  **Information Maintenance:** `System calls help in making information maintenance such as get/set time or date, get/set data of system, processes, files or attributes of device.`
 
-* **Communication between processes:** `Systems calls are use for Communication purpose as they help in creating and deleting communications, sending or receiving messages. They help in attaching or detaching remote devices and in transfer or status information.`
+  **Communication between processes:** `Systems calls are use for Communication purpose as they help in creating and deleting communications, sending or receiving messages. They help in attaching or detaching remote devices and in transfer or status information.`
 
 **Q 2.2:** What are the five major activities of an operating system with regard to
 process management?
 
 * **Answer:** `Five activities of operating system with regard to the process management are given as follows:`
 
-  * 1. It helps in protecting the procceses from deadlocks.
+    1. It helps in protecting the procceses from deadlocks.
 
-  * 2. It helps in providing mechanisms for communication between processes.
+    2. It helps in providing mechanisms for communication between processes.
 
-  * 3. It provides synchronization for multiple processes.
+    3. It provides synchronization for multiple processes.
 
-  * 4. It provides resumption and suspension of processes.
+    4. It provides resumption and suspension of processes.
 
-  * 5. It creates and deletes processes of both user processes and system processes.
+    5. It creates and deletes processes of both user processes and system processes.
 
 **Q 2.3:** What are the three major activities of an operating system with regard
 to memory management?
 
 * **Answer:** The three major activities of an operating system in connection with regard to memory management are:
 
-  * 1. `Keep track of which parts of memory are currently being used and by whom.`
+    1. `Keep track of which parts of memory are currently being used and by whom.`
 
-  * 2. `Decide which processes are to be loaded into memory when memory space becomes available.`
+    2. `Decide which processes are to be loaded into memory when memory space becomes available.`
 
-  * 3. `Allocate and de allocate memory space as needed.`
+    3. `Allocate and de allocate memory space as needed.`
 
 **Q 2.4:** What are the three major activities of an operating system with regard to secondary-storage management?
 
 * **Answer:** Three important activities of operating system with regard to the secondary storage is given as follows:
 
-  * 1. `It manages the free space available on the secondary storage media.`
+    1. `It manages the free space available on the secondary storage media.`
 
-  * 2. `Whenever a new file has to be written, it provides the storage space for it.`
+    2. `Whenever a new file has to be written, it provides the storage space for it.`
 
-  * 3. `It schedules the various requests for memory accesses.`
+    3. `It schedules the various requests for memory accesses.`
 
 **Q 2.5:** What is the purpose of the command interpreter? Why is it usually separate from the kernel?
 

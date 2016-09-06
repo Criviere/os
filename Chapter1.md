@@ -1,4 +1,3 @@
-This is a test.
 # Chapter 1 Review Questions
  ### Operating Systems ###
  #### 1.1. - 1.17 ###
