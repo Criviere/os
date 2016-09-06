@@ -9,3 +9,5 @@
 Purpose of system calls are given as follows:
 
 *  **Basic Purpose:** Calls provide basic functionality to users to operate the operating system.
+
+* **Process Control:** Systems call loads, execute and create processes and terminate when the user's task is finished with the process.
