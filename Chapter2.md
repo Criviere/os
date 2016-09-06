@@ -172,10 +172,11 @@ to memory management?
 
       * **Part 2:** `When a user program executes and I/O operation, it executes an I/O operation, it executes a system call that is trapped to the I/O layer, which calls the memory management layer, which in turn calls the CPU -scheduling layer, which is then passed to hardware. At each layer parameter may be modified, data may need to be passed and so on. Each layer adds overhead to system call, the net result is a system call that takes longer than does one on a non layered system.`
 
-      `The layers are designed, providing most of the advantages of modularized code while avoiding difficult problems of layer definition and interaction.`
+        `The layers are designed, providing most of the advantages of modularized code while avoiding difficult problems of layer definition and interaction.`
 
     **Q 2.22:** What are the advantages of using loadable kernel modules?
 
-      * **Answer:** `An OS has been developed called Mach that modularized the kernel using the microkernel approach. This method structures the OS by removing all non-essential components from the kernel and implemnting them as system and user-level program. Micro kernel provides minimal process and memory management with communication facility. The communication is done indirectly via the method called Message passing.`
+       **Answer:**
+        * `An OS has been developed called Mach that modularized the kernel using the microkernel approach. This method structures the OS by removing all non-essential components from the kernel and implemnting them as system and user-level program. Micro kernel provides minimal process and memory management with communication facility. The communication is done indirectly via the method called Message passing.`
 
-      `All new services are added to user space and consequently do not require modification of the kernel. Micro kernel provides more security and reliability, since most services are running as user rather than kernel.`
+        * `All new services are added to user space and consequently do not require modification of the kernel. Micro kernel provides more security and reliability, since most services are running as user rather than kernel.`
