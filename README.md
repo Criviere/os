@@ -1,2 +1,2 @@
 # os
-##This repo contains chapter review questions for Operating Systems
+##This repo contains chapter review questions and answers for Operating Systems
