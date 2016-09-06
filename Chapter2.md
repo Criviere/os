@@ -25,15 +25,15 @@ process management?
 
 * **Answer:** `Five activities of operating system with regard to the process management are given as follows:`
 
-    1. It helps in protecting the procceses from deadlocks.
+    1. `It helps in protecting the procceses from deadlocks.`
 
-    2. It helps in providing mechanisms for communication between processes.
+    2. `It helps in providing mechanisms for communication between processes.`
 
-    3. It provides synchronization for multiple processes.
+    3. `It provides synchronization for multiple processes.`
 
-    4. It provides resumption and suspension of processes.
+    4. `It provides resumption and suspension of processes.`
 
-    5. It creates and deletes processes of both user processes and system processes.
+    5. `It creates and deletes processes of both user processes and system processes.`
 
 **Q 2.3:** What are the three major activities of an operating system with regard
 to memory management?
@@ -86,7 +86,7 @@ to memory management?
 
   * `The main advantage of the layered approach is simplicity of construction and debugging.`
 
-  * Some of the disadvantages or difficulties with layered approach are:
+    **Some of the disadvantages or difficulties with layered approach are:**
 
      1. `The major difficulty with the layered apprach involves careful definition of the layer, because a layer can use only those layers below it. For example, the device driver for the disk space used by virtual-memory algorithms must be a at a level lower than that of memory management routines, because memory management requires the ability to use the disk space.`
 
@@ -94,9 +94,9 @@ to memory management?
 
  **Q 2.9: ** List five services provided by an operating system, and explain how each creates convenience for users. In which cases would it be impossible for user-level programs to provide these services? Explain your answer.
 
- * **Answer:**
+  **Answer:**
 
-  * `Five services provided by the operated system are given as follows:`
+  **Five services provided by the operated system are given as follows:**
 
     1. `Program execution`
     2. `I/O operations`
@@ -104,13 +104,13 @@ to memory management?
     4. `Communications`
     5. `Error detection`
 
-    * Program Exection:
+    Program Exection:
 
       * `It allows the user to execute programs by providing convenient environment for development and execution of programs.`
 
       * `A user level program cannot properly allocate CPU time.`
 
-    * I/O Operations:
+    I/O Operations:
 
       * `Every program may require some input/output such as a file or an I/O device.`
 
@@ -118,7 +118,7 @@ to memory management?
 
       * `A user level program cannot control the I/O devices directly. For some I/O devices, special functions are necessary.`
 
-    * File-system manipulation:
+    File-system manipulation:
 
       * `All task related to files such as creating a file, deleting a file, reading a file, writing to a file, etc. are handle by the operating system.`
 
@@ -126,7 +126,7 @@ to memory management?
 
       * `User made programs cannot be made to allocate free blocks when available and deallocate the blocks after deletion.`
 
-    * Communications:
+    Communications:
 
       * `There are times when a process needs to communicate with other process. All this is taken care by operating system.`
 
@@ -137,18 +137,24 @@ to memory management?
     * **Answer:**
 
       * `Creation and deletion of files.`
+
       * `Creation and deletion of directories.`
+
       * `Supporting primitives for manipulating files and directories.`
+
       * `Mapping the files onto secondary storage.`
+
       * `Backing up files on nonvolatile storage media.`
 
   **Q 2.18:** What are the two models of interprocess communication? What are the strengths and weaknesses of the two approaches?
 
-    * **Answer:**
+    **Answer:**
 
-      * Message - passing model: `In this, the communicating processes exchange messages with one another to transfer information. Messages can be exchanged between the processes either directly or indirectly through a common mail box. Message passing is useful for exchanging smaller amounts of data, because no conflicts need to be avoided. It is also easier to implement than is shared memory for inter computer communication. But the main advantage is it can handle only small amounts of data.`
+    * Message - passing model:
+      * `In this, the communicating processes exchange messages with one another to transfer information. Messages can be exchanged between the processes either directly or indirectly through a common mail box. Message passing is useful for exchanging smaller amounts of data, because no conflicts need to be avoided. It is also easier to implement than is shared memory for inter computer communication. But the main advantage is it can handle only small amounts of data.`
 
-      * Shared - Memory mode: `In this, processes use shared memory creates and shared memory attaches system calls to create and gain access to regions of memory owned by other processes. Two or more processes can exchange information by reading and writing data in the shared areas. Shared memory allows maximum speed and convenience of communication, since it can be done at memory speeds when it takes place within a computer. Problem exist, however, in the areas of protection and synchronization between the processes sharing memory.`
+    * Shared - Memory mode:
+        * `In this, processes use shared memory creates and shared memory attaches system calls to create and gain access to regions of memory owned by other processes. Two or more processes can exchange information by reading and writing data in the shared areas. Shared memory allows maximum speed and convenience of communication, since it can be done at memory speeds when it takes place within a computer. Problem exist, however, in the areas of protection and synchronization between the processes sharing memory.`
 
   **Q 2.19:** Why is the separation of mechanism and policy desirable?
 
