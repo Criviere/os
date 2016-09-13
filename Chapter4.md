@@ -165,7 +165,7 @@ open each new website in a separate thread? Explain.
 
   Explanation:
 
-  `Consider a scenaior where Process 'A' and 'B' have four different task P1, P2, P3, and P4. So in order to go for execution, first Process 'A' of P1 executes, then Process 'B' of P1 executes, Secondly, Process 'A' of P2 executes, then Process 'B' of P2 executes and goes on until all the threads are finished for their execution.`
+  `Consider a scenario where Process 'A' and 'B' have four different task P1, P2, P3, and P4. So in order to go for execution, first Process 'A' of P1 executes, then Process 'B' of P1 executes, Secondly, Process 'A' of P2 executes, then Process 'B' of P2 executes and goes on until all the threads are finished for their execution.`
 
   Parallelism:
 
@@ -190,3 +190,118 @@ has a 60 percent parallel component for
 
   **Answer:**
   `As per Amdahl's law formula for the speedup gain of an application is speedup <= 1/(S + (1 - S)/N) where, S is the portion of the application that must be performed serially and N is the no. of processing cores.`
+
+  (a)
+  `For two processing cores and 60 percent parallel component, S is 40 percent that is 0.4 and N is 2.`
+
+  `speedup <= 1/(0.4 + (1-0.4)/2`
+  `speedup <= 1.428`
+  `Speedup gain is 1.428 times.`
+
+  (b)
+  `For four processing cores and 60 percent parallel component Here, S is 40 percent that is 0.4 and N is 4`
+
+  `speedup <= 1/(0.4 + (1-0.4)/4)`
+  `speedup <= 1.81`
+  `Speedup gain is 1.81 times.`
+
+  4.13
+
+  Determine if the following problems exhibit task or data parallelism:
+
+  The multithreaded statistical program described in Exercise 4.21
+
+  The multithreaded Sudoku validator described in Project 1 in this
+chapter
+
+  The multithreaded sorting program described in Project 2 in this
+chapter
+
+ The multithreaded web server described in Section 4.1
+
+  **Answer:**
+
+  - `The statistical program is Data Parallelism. Here, multiple threads are created and each thread is performing functions like calculating average, finding minimum value, finding maximum value on same data.`
+
+  - `So in order to perform these operations it creates threads and does the operation in parallel for task completion.`
+
+
+  - `The multithreaded Sudoku validator is Task Parallelism. Here, in Sudoku solution example, there are constraints that each row or column should contain the digits from 1 to 9. And each grid should have digits from 1 to 9, which can go when one thread completes, it starts another until all eleven threads.`
+
+
+  `So here it takes task from one thread to another, until it completes and satisfies all tasks and these tasks need not to run concurrently.`
+
+
+  - `The multithreaded sorting program is Data Parallelism. Here, in sorting list, the list is divided in two half threads runs concurrently and execute individually to provide resultant threads and then`
+
+
+  - `The multithreaded web server is Task Parallelism. In single threaded, the threads which are created are able to perform only one task, whereas, multithreaded creates threads in such a way that is able to perform multitask at a time leading to better performance.`
+
+ 4.14 A system with two dual-core processors has four processors available
+for scheduling. A CPU-intensive application is running on this system.
+All input is performed at program start-up, when a single file must
+be opened. Similarly, all output is performed just before the program terminates, when the program results must be written to a single
+file. Between startup and termination, the program is entirely CPUbound.
+Your task is to improve the performance of this application
+by multithreading it. The application runs on a system that uses the
+one-to-one threading model (each user thread maps to a kernel thread).
+• How many threads will you create to perform the input and output?
+Explain.
+• How many threads will you create for the CPU-intensive portion of
+the application? Explain.
+
+
+  **Answer:**
+
+  - `Threads count depends upon the priority and requirements of the application. So only thread is enough for this kind of application and this thread is going to handle both input and output operation.`
+
+    - `It is a concurrency approach. Here, it only makes sense to create as many threads as there are blocking system calls, as the threads will be spent blocking.`
+
+    - `It doesn't provides any benefits to create an additional threads.`
+
+    - `Thus, only a signal thread creation makes sense for input and a single thread for output.`
+
+    - `Four threads are created to perform the CPU-intensive portion of the application. It is because, there should be as many threads as there are processing cores.`
+
+    - `It would be the waste of processing resources to use fewer threads.`
+
+    - `Also any number greater than four would be unable to run.`
+
+4.15 Consider the following code segment:
+
+pid t pid;
+
+pid = fork();
+
+if (pid == 0) { /* child process /*
+
+fork();
+
+thread create( . . .);
+
+}fork();
+
+a. How many unique processes are created?
+
+b. How many unique threads are created?
+
+  **Answer:**
+
+  - `The statement pid = fork(); before the if statement creates one process. The parent process say p creates this process. Let it be p1.`
+
+  - `The statement fork(); in the if statement creates one process. The parent process p creates this process. Let it be p2.`
+
+  - `After the if statement, parent process p, process p1 and process p2 will execute fork(); creating three new processes.`
+
+    - `One process is created by parent process p.`
+    - `One process is created by process p1.`
+    - `One process is created by process p2.`
+
+
+  `Hence, 5 unique processes (p1, p2, p3, p4, p5) will be created. If the parent process is also considered, then 6 unique processes (p, p1, p2, p3, p4, p1, p5) will be created.`
+
+  - `Thread creation is done in if block. Only child process p1 is executed in the if block. Therefore, process p1 will be created one thread.`
+
+  - `In the if block one process p2 is created using fork(). Therefore, process p2 will also create a thread.`
+
+  `Hence, 2 unique threads will be created.`
