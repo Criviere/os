@@ -426,4 +426,24 @@ c. The number of kernel threads allocated to the program is greater
 than the number of processing cores but less than the number of
 user-level threads.
 
-4.19
+4.19 Pthreads provides an API for managing thread cancellation. The
+pthread setcancelstate() function is used to set the cancellation
+state. Its prototype appears as follows:
+pthread setcancelstate(int state, int oldstate)
+The two possible values for the state are PTHREAD CANCEL ENABLE and
+PTHREAD CANCEL DISABLE.
+Using the code segment shown in Figure 4.17, provide examples of
+two operations that would be suitable to perform between the calls to
+disable and enable thread cancellation
+
+  **Answer:**
+
+  - `Thread cancellation is a process of cancelling thread before its completion. Thread cancellation leads to termination of the executing thread in the process. To cancel a thread, below given functions are used.`
+
+    - `In order to cancel thread, pthread_cancel() function is used.`
+
+    - `pthread_cancel() functions depends on pthread_setcancelstate() function.`
+
+    - `To cancel thread immediately PTHREAD_CANCEL_ASYNCHRONOUS type is set.`
+
+    - `The default cancellation type is PTHREAD_CANCEL_DEFERED which means thread is cancelled only when it reaches its termination point.`
