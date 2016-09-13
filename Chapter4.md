@@ -64,7 +64,9 @@ from those used when a process is created?
   Resources are used when a thread is created:
 
     1. `Code section`
+
     2. `Data section`
+    
     3. `Other operation system resources such as open files and signals with other threads belonging to the same process whereas each and every process has separate code section, data section and operating system resources.`
 
 4.5 Assume that an operating system maps user-level threads to the kernel
