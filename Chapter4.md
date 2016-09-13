@@ -340,7 +340,53 @@ threads within the kernel.
  4.17 The program shown in Figure 4.16 uses the Pthreads API. What would
 be the output from the program at LINE C and LINE P?
 
+
+#include <pthread.h>
+#include <stdio.h>
+#include <types.h>
+int value = 0;
+void runner(void param);
+
+int main(int argc, char argv[])
+
+{
+
+pid t pid;
+
+pthread t tid;
+
+pthread attr t attr;
+
+pid = fork();
+
+if (pid == 0) { /* child process /
+
+pthread attr init(&attr);
+
+pthread create(&tid,&attr,runner,NULL);
+
+pthread join(tid,NULL);
+
+printf("CHILD: value = %d",value); /* LINE C /
+
+}else if (pid > 0) { parent process /
+
+wait(NULL);
+
+printf("PARENT: value = %d",value); /* LINE P /
+
+  }
+}
+void runner(void param) {
+
+value = 5;
+
+pthread exit(0);
+
+}
+
   **Answer:**
+
 
   `The output is CHILD: value = 5`
 
@@ -359,3 +405,20 @@ be the output from the program at LINE C and LINE P?
     - `After completing the child process, the value of the global variable present in parent process remains 0.`
 
     - `Thus, after execution of this line, the value displayed will be 0.`
+
+
+4.18 Consider a multicore system and a multithreaded program written
+using the many-to-many threading model. Let the number of user-level
+threads in the program be greater than the number of processing cores
+in the system. Discuss the performance implications of the following
+scenarios.
+
+a. The number of kernel threads allocated to the program is less than
+the number of processing cores.
+
+b. The number of kernel threads allocated to the program is equal to
+the number of processing cores.
+
+c. The number of kernel threads allocated to the program is greater
+than the number of processing cores but less than the number of
+user-level threads.
