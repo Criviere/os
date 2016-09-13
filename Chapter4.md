@@ -341,9 +341,10 @@ threads within the kernel.
 be the output from the program at LINE C and LINE P?
 
 
-#include <pthread.h>
-#include <stdio.h>
-#include <types.h>
+include <pthread.h>
+include <stdio.h>
+include <types.h>
+
 int value = 0;
 void runner(void param);
 
