@@ -447,3 +447,13 @@ disable and enable thread cancellation
     - `To cancel thread immediately PTHREAD_CANCEL_ASYNCHRONOUS type is set.`
 
     - `The default cancellation type is PTHREAD_CANCEL_DEFERED which means thread is cancelled only when it reaches its termination point.`
+
+`Thread cancellation state and type determine when the thread cancellation request is placed. There are two states in thread cancellation:`
+
+ - `PTHREAD_CANCEL_DISABLE in all cancellation state are held pending.`
+
+ - `PTHREAD_CANCEL_ENABLE in which cancellations requests are acted on according to thread cancellation types.`
+
+ - `The default thread cancellation type is PTHREAD_CANCEL_DISABLE.`
+
+ - `The system test for pending cancellation requests in certain blocking functions, if cancellation function is ENABLED and its type is DEFERED. These points are known as cancellation points. pthread_testcancel() function is used to create cancellation points.`
