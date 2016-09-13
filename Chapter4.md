@@ -305,3 +305,57 @@ b. How many unique threads are created?
   - `In the if block one process p2 is created using fork(). Therefore, process p2 will also create a thread.`
 
   `Hence, 2 unique threads will be created.`
+
+4.16 As described in Section 4.7.2, Linux does not distinguish between
+processes and threads. Instead, Linux treats both in the same way,
+allowing a task to be more akin to a process or a thread depending on the
+set of flags passed to the clone() system call. However, other operating
+systems, such as Windows, treat processes and threads differently.
+Typically, such systems use a notation in which the data structure for
+a process contains pointers to the separate threads belonging to the
+process. Contrast these two approaches for modeling processes and
+threads within the kernel.
+
+  **Answer:**
+
+  `Linux operating systems consider both threads and processes as tasks; it cannot distinguish between them. In contrast, windows operating system threads and processes differently.`
+
+  `This approach has pros and cons while modeling threads and processes inside the kernel.`
+
+  **Pros:**
+
+   - `Linux consider this as similar, so codes belong to operating system can be cut down easily.`
+
+   - `Scheduler present in the Linux operating systems do not need special code to test threads coupled with each processes.`
+
+   - `It considers different threads and processes as a single task during the time of scheduling.`
+
+  **Cons:**
+
+    - `This ability makes it harder for the Linux operating system to inflict process-wide resource limitations directly.`
+
+    - `Extra steps are needed to recognize the each processes belong to appropriate threads and complexity in performing relevant tasks.`
+
+
+ 4.17 The program shown in Figure 4.16 uses the Pthreads API. What would
+be the output from the program at LINE C and LINE P?
+
+  **Answer:**
+
+  `The output is CHILD: value = 5`
+
+  - `The child process in the thread is forked by parent process and child process each have its own memory space.`
+
+  - `After forking, the parent process waits for the completion of child process.`
+
+  - `New thread is created for child process and the runner() function is called which set the value of the global vairlable to 5.`
+
+  - `Thus, after execution of this line, the value displayed will be 5.`
+
+  `The output of LINE P in the program:`
+
+  `The output is PARENT: value = 0`
+
+    - `After completing the child process, the value of the global variable present in parent process remains 0.`
+
+    - `Thus, after execution of this line, the value displayed will be 0.`
