@@ -405,9 +405,9 @@ pthread exit(0);
 
   `The output is PARENT: value = 0`
 
-    - `After completing the child process, the value of the global variable present in parent process remains 0.`
+  - `After completing the child process, the value of the global variable present in parent process remains 0.`
 
-    - `Thus, after execution of this line, the value displayed will be 0.`
+  - `Thus, after execution of this line, the value displayed will be 0.`
 
 
 4.18 Consider a multicore system and a multithreaded program written
@@ -425,3 +425,5 @@ the number of processing cores.
 c. The number of kernel threads allocated to the program is greater
 than the number of processing cores but less than the number of
 user-level threads.
+
+4.19
