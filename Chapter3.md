@@ -1,47 +1,28 @@
 #Chapter 3#
 ***
 
-**Q 3.3:** Original versions of Apple’s mobile iOS operating system provided no
-means of concurrent processing. Discuss three major complications that
-concurrent processing adds to an operating system.
+**Q 3.3:** Original versions of Apple’s mobile iOS operating system provided no means of concurrent processing. Discuss three major complications that concurrent processing adds to an operating system.
 
-  * **Answer:**
+  **Answer:**
 
-    * Concurrent Systems:
+  * Concurrent Systems:
 
-      * `Concurrent systems are those which support the concept of executing
-      more than one applications or processes at the same time. Here the proc-
-      esses running can be either a duplicate of each other or simply two di-
-      fferent processes in all.`
+    * `Concurrent systems are those which support the concept of executing more than one applications or processes at the same time. Here the processes running can be either a duplicate of each other or simply two different processes in all.`
 
-      * `The main motive behind going for concurreny lies beneath reducing the
-      overall execution time that may be required in executing a series of pro-
-      cesses individually.`
+    * `The main motive behind going for concurrency lies beneath reducing the overall execution time that may be required in executing a series of processes individually.`
 
-    * Complications with Concurrency:
+  * Complications with Concurrency:
 
-    Concurrency may reduce the overall processing time for some situations, but
-    it has few of its complications as well. Three major complications that con-
-    currency adds to an operating system are as follows:
+    Concurrency may reduce the overall processing time for some situations, but it has few of its complications as well. Three major complications that concurrency adds to an operating system are as follows:
 
-      * `As multiple processes are concurrently running on the system, the opera-
-      ting system requires keeping track of all the storage space addressed on
-      main memory to prevent on process from mixing with another or using the
-      information stored for any other running process.`
+      * `As multiple processes are concurrently running on the system, the operating system requires keeping track of all the storage space addressed on main memory to prevent on process from mixing with another or using the information stored for any other running process.`
 
-      * `Context switching between two simultaneous processes requires enough
-      time to locate and maintain register values for program running. A conti-
-      nious communication between operating system and program control block may
-      overload the system.`
+      * `Context switching between two simultaneous processes requires enough time to locate and maintain register values for program running. A continuos communication between operating system and program control block may overload the system.`
 
       * `Process that requires big data blocks for execution may enter deadlocks
       in wait of getting resources freed up by other processes.`
 
-  **Q 3.4:** The Sun UltraSPARC processor has multiple register sets. Describe what
-happens when a context switch occurs if the new context is already
-loaded into one of the register sets. What happens if the new context is
-in memory rather than in a register set and all the register sets are in
-use?
+  **Q 3.4:** The Sun UltraSPARC processor has multiple register sets. Describe what happens when a context switch occurs if the new context is already loaded into one of the register sets. What happens if the new context is in memory rather than in a register set and all the register sets are in use?
 
   * **Answer:**
 
@@ -52,11 +33,11 @@ use?
 
   **Q 3.5:** When a process creates a new process using the fork() operation, which of the following states is shared between the parent process and the child process?
 
-    a. Stack
+  a. Stack
 
-    b. Heap
+  b. Heap
 
-    c. Shared memory segments
+  c. Shared memory segments
 
   * **Answer: **
 
