@@ -5,7 +5,7 @@ not accept another incoming connection until an existing connection
 is released. Explain how semaphores can be used by a server to limit the
 number of concurrent connections.
 
-#Answer:#
+**Answer:**
 
 `The main disadvantage of mutual exclusion is that they require all process to be bust waiting. Busy waiting wastes CPU cycle so-that other process do not use it. A semaphore that product this result is called spinlock because the process "Spin" while waiting for lock. The main advantage of spin lock is that no context switch is required when a process must wait on a lock and context switch takes much time. Hence spinlock is useful for short locks. They are often used in multiprocessor system where one thread spin while other thread perform its critical section.`
 
