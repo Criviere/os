@@ -41,3 +41,8 @@ else
 }
 
 Hence, only one race condition is observed in the program code that is on the variable number_of_processes.`
+
+
+`b.
+
+If we have a mutex lock in the given program, with acquire() and release() operations; the programmer needs to place the two operations at the very first and end of a function call respectively. The acquire() function should be placed in the beginning of function call. Whereas, release() operation call should be placed just before the end of function call.`
