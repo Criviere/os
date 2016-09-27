@@ -13,3 +13,31 @@ number of concurrent connections.
 
 `Semaphores can be used by a server to limit the number of concurrent connections. This can be accomplished by initializing the semaphore 'availableConn' to a value 'N'. When a new connection is opened, the semaphore value should be decremented by executing P (availableConn) to decrement the value of currently available connections.
 Similarly, when one connection is closed, then V(availableConn) can be executed indicating that there is one more socket available for a connection.`
+
+5.20
+Consider the code example for allocating and releasing processes shown in Figure 5.23.
+a. Identify the race condition(s).
+b. Assume you have a mutex lock named mutex with the operations
+acquire() and release(). Indicate where the locking needs to
+be placed to prevent the race condition(s).
+c. Could we replace the integer variable
+int number of processes = 0
+with the atomic integer
+atomic t number of processes = 0
+to prevent the race condition(s)?
+
+**Answer:**
+
+`Where many processes receive and modify the same data simultaneously and outcome of the program based on the sequence in which they are accessed is known as race condition.`
+
+`The given code illustrates only one race condition; that is on the variable 'number_of_processes'. The piece of code that illustrates the same is given below:`
+
+`if (number_of_processes == MAX_PROCESSES)
+      return -1;
+else
+{
+    ++number_of_processes;
+    Return new_pid;
+}
+
+Hence, only one race condition is observed in the program code that is on the variable number_of_processes.`
