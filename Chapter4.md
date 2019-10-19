@@ -28,9 +28,9 @@ threads? Under what circumstances is one type better than the other?
 | User-level threads are scheduled by the thread library. | Kernel-level threads are scheduled by the kernel. |
 
 **Answer:**
-
+fgfgg
 Circumstances where kernel-level threads are better than user-level threads:
-
+fg
 - `If the kernel is single-threaded, then kernel-level threads are better than user-level threads, because any user-level thread performing a blocking system call will cause the entire process to block, even if other threads are available to run within the application.`
 
 - `For example a process P1 has 2 kernel level threads and process P2 has 2 user-level threads. If one thread in P1 gets blocked, its second thread is not affected. But in case of P2 if one thread is blocked (say for I/O), the whole process P2 along with the 2nd thread gets blocked.`
