@@ -144,4 +144,4 @@ d. Fixed-sized and variable-sized messages
       * `Variable sized messages are somewhat more complex for the kernel but somewhat easier for the programmer. The number of variable-sized messages that can be held by such a buffer is unknown.`
 
       Example:
-      `Windows 2000 handles this situation with fixed-sized messages (anything < 256 bytes), the mesages are copied from the address space of the sender to the address space of the receiving process. Larger messages use shared memory to pass the message.`
+      `Windows 2000 handles this situation with fixed-sized messages (anything < 256 bytes), the mesages are copied from the address space of the sender to the address space of the receiving process. Larger messages use shared memory to pass the message.` 
