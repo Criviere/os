@@ -186,4 +186,4 @@ Purpose of system calls are given as follows:
 
   * `An OS has been developed called Mach that modularized the kernel using the microkernel approach. This method structures the OS by removing all non-essential components from the kernel and implementing them as system and user-level program. Micro kernel provides minimal process and memory management with communication facility. The communication is done indirectly via the method called Message passing.`
 
-  * `All new services are added to user space and consequently do not require modification of the kernel. Micro kernel provides more security and reliability, since most services are running as user rather than kernel.`
+  * `All new services are added to user space and consequently do not require modification of the kernel. Micro kernel provides more security and reliability, since most services are running as user rather than kernel.` 
