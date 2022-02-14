@@ -456,4 +456,4 @@ disable and enable thread cancellation
 
  - `The default thread cancellation type is PTHREAD_CANCEL_DISABLE.`
 
- - `The system test for pending cancellation requests in certain blocking functions, if cancellation function is ENABLED and its type is DEFERED. These points are known as cancellation points. pthread_testcancel() function is used to create cancellation points.`
+ - `The system test for pending cancellation requests in certain blocking functions, if cancellation function is ENABLED and its type is DEFERED. These points are known as cancellation points. pthread_testcancel() function is used to create cancellation points.` 
