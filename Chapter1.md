@@ -265,4 +265,4 @@ each.`
 `The asymmetric clustering, one machine is hot-stand by mode, while the other is running the applications. The host-stand by host machines does nothing but monitor the active server. If that server fails, the hot stand by host becomes the active server.`
 
 **Part 3:**
-`In symmetric mode, two or most hosts are running applications, and they are monitoring each other. This mode is different, as it uses all the available hardware. It requires more than one application be available to run.`
+`In symmetric mode, two or most hosts are running applications, and they are monitoring each other. This mode is different, as it uses all the available hardware. It requires more than one application be available to run.` 
